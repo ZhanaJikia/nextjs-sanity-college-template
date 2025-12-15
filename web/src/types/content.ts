@@ -2,21 +2,16 @@ import { PortableText } from "@portabletext/react";
 
 export type PortableValue = Parameters<typeof PortableText>[0]["value"];
 
-export type BrandColors = {
-  primary: string;
-  secondary: string;
-  background: string;
-};
+export type Theme = "navy" | "emerald" | "crimson" | "violet";
 
 export type School = {
   title: string;
   slug: string;
-  colors: BrandColors;
+  theme: Theme;
 };
 
 export type PageType = "home" | "about" | "faq";
 
-// Minimal shape that Sanity image builder can work with
 export type SanityImage = {
   asset: { _ref: string; _type: "reference" };
 };
